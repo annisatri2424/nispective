@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Blog | Nispective</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+<header class="about-header">
+  <nav>
+    <div class="logo">
+      <img src="image/logo.png" alt="Nispective Logo" />
+    </div>
+    <ul class="menu">
+        <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="portfolio.html">Portfolio</a></li>
+      <li><a href="blog.html">Blog</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+  <img src="image/blog.png" alt="blog" style="height: 200px; width: auto; display: block; margin: 0 auto;">
+  <div style="flex: 1 1 65%;">
+    <div style="margin: 10px 0px 0px 50px;">
+      <input type="text" placeholder="Search" style="width: 20%; padding: 10px 20px;" />
+    </div>
+</header>
+
+
+<main style="display: flex; justify-content: center; padding: 40px 20px; background-color: #ffffff; flex-wrap: wrap;">
+  <!-- Konten utama -->
+  <div style="flex: 1; max-width: 65%; margin-right: 20px;">
+    <!-- Filter kategori -->
+    <div style="margin-bottom: 20px;">
+      <button onclick="filterCategory('all')" style="margin-right: 10px;">All</button>
+      <button onclick="filterCategory('review')" style="margin-right: 10px;">Film Reviews</button>
+      <button onclick="filterCategory('experience')" style="margin-right: 10px;">Experiences</button>
+      <button onclick="filterCategory('volunteer')">Volunteering</button>
+    </div>
+
+    <!-- Artikel -->
+    <div class="article-box review" style="background: white; box-shadow: 0 2px 8px rgba(0,0,0,0.1); border-radius: 8px; padding: 20px; margin-bottom: 20px;">
+      <h3>Pengalaman Magang di BTPN Selama 6 Bulan</h3>
+      <p style="font-size: 12px;">01/02/2025</p>
+      <p>Saya mendapatkan kesempatan magang di salah satu bank yaitu bank BTPN...</p>
+      <button style="margin-top: 10px;">See more</button>
+    </div>
+
+    <div class="article-box volunteer" style="background: white; box-shadow: 0 2px 8px rgba(0,0,0,0.1); border-radius: 8px; padding: 20px; margin-bottom: 20px;">
+      <h3>Menjadi Volunteer di Pulau</h3>
+      <p style="font-size: 12px;">01/02/2025</p>
+      <p>Pengalaman baru bagi saya menjadi salah satu volunteer yang mengabdi di Pulau Lae-lae...</p>
+      <button style="margin-top: 10px;">See more</button>
+    </div>
+
+    <div class="article-box experience" style="background: white; box-shadow: 0 2px 8px rgba(0,0,0,0.1); border-radius: 8px; padding: 20px; margin-bottom: 20px;">
+      <h3>Berkesempatan Magang di BAPENDA</h3>
+      <p style="font-size: 12px;">01/02/2025</p>
+      <p>Akhir semester saya ingin mempunyai pengalaman magang lagi di Badan Pendapatan Daerah Kota...</p>
+      <button style="margin-top: 10px;">See more</button>
+    </div>
+  </div>
+
+  <!-- Sidebar -->
+  <aside style="flex: 1; max-width: 30%; background: #102942; padding: 20px; border-radius: 10px; color: white;">
+    <h3>Most Read</h3>
+    <div style="margin-bottom: 15px;">
+      <strong>Berkesempatan Magang di BAPENDA</strong>
+      <p style="font-size: 12px;">Akhir semester saya ingin mempunyai pengalaman magang lagi...</p>
+    </div>
+    <div style="margin-bottom: 15px;">
+      <strong>Pengalaman Magang di BTPN Selama 6 Bulan</strong>
+      <p style="font-size: 12px;">Saya mendapatkan kesempatan magang di salah satu bank yaitu BTPN...</p>
+    </div>
+    <div>
+      <strong>Menjadi Volunteer di Pulau</strong>
+      <p style="font-size: 12px;">Pengalaman menjadi salah satu volunteer yang mengabdi...</p>
+    </div>
+
+    <div style="margin-top: 20px;">
+      <h4>Popular Tags</h4>
+      <span style="font-size: 10px; background: #edce94; color: black; padding: 5px 8px; margin: 2px; border-radius: 4px;">Film Review</span>
+      <span style="font-size: 10px; background: #edce94; color: black; padding: 5px 8px; margin: 2px; border-radius: 4px;">Digital Business</span>
+      <span style="font-size: 10px; background: #edce94; color: black; padding: 5px 8px; margin: 2px; border-radius: 4px;">Student</span>
+    </div>
+  </aside>
+</main>
+
+<script>
+  function filterCategory(category) {
+    const articles = document.querySelectorAll('.article-box');
+    articles.forEach(article => {
+      if (category === 'all') {
+        article.style.display = 'block';
+      } else {
+        article.style.display = article.classList.contains(category) ? 'block' : 'none';
+      }
+    });
+  }
+</script>
+
+
+
+<footer style="background-color: #102942; color: white; padding: 30px 50px 20px 50px;">
+    <div style="display: flex; justify-content: space-between; flex-wrap: wrap;">
+      <div style="max-width: 300px; margin-bottom: 20px;">
+        <h4 style="color: #edce94; font-size: 20px;">About Nispective</h4>
+        <p style="font-size: 10px;">Nispective is a platform where I share my experiences, thoughts, & film reviews, providing a unique, sincere, and straightforward personal viewpoint.</p>
+      </div>
+      <div style="max-width: 150px; margin-bottom: 20px;">
+        <h4 style="color: #edce94; font-size: 20px;">Quick Links</h4>
+        <a style="font-size: 10px; display: block; color: white; text-decoration: none; margin-bottom: 5px;" href="index.html">Home</a>
+        <a style="font-size: 10px; display: block; color: white; text-decoration: none; margin-bottom: 5px;" href="about.html">About</a>
+        <a style="font-size: 10px; display: block; color: white; text-decoration: none; margin-bottom: 5px;" href="portfolio.html">Portfolio</a>
+        <a style="font-size: 10px; display: block; color: white; text-decoration: none; margin-bottom: 5px;" href="blog.html">Blog</a>
+        <a style="font-size: 10px; display: block; color: white; text-decoration: none;" href="contact.html">Contact</a>
+      </div>
+      <div style="max-width: 250px; margin-bottom: 20px;">
+        <h4 style="color: #edce94; font-size: 20px;">Contact & Social Media</h4>
+        <p style="font-size: 10px;">Email: nispective@gmail.com</p>
+        <p style="font-size: 10px;">Based in Makassar, Indonesia</p>
+        <p style="font-size: 10px;">Follow me:</p>
+        <div style="display: flex; gap: 10px; margin-top: 5px;">
+          <a href="https://www.instagram.com/natr.w" target="_blank">
+            <img src="image/ig.png" alt="Instagram" style="width: 30px; height: auto;">
+          </a>
+          <a href="https://www.linkedin.com/in/nur-annisa-tri-rahma-w-503399282/" target="_blank">
+            <img src="image/link.png" alt="LinkedIn" style="width: 30px; height: auto;">
+          </a>
+        </div>
+      </div>    
+    </div>
+    <div style="display: flex; justify-content: space-between; align-items: center; border-top: 1px solid #ccc; padding-top: 10px; margin-top: 20px;">
+      <!-- Logo kiri -->
+      <div>
+        <img src="image/logo.png" alt="Nispective Logo" style="width: 80px;">
+      </div>
+      <div>
+        <p style="font-size: 10px;">© 2025 Nispective – All rights reserved.</p>
+      </div>
+    </div>
+  
+  </footer>
+</body>
+</html>

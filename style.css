@@ -177,7 +177,7 @@ header {
 }
 
 .see-more {
-  margin-top: 20px;
+  margin-top: 80px;
   padding: 10px 20px;
   background: #edce94;
   border: none;
@@ -246,4 +246,110 @@ header {
 .footer-bottom p {
   font-size: 10px;
   margin-right: 10px;
+}
+/* ======================== */
+/*        ABOUT PAGE        */
+/* ======================== */
+
+.about-header {
+  background: linear-gradient(to right, #182f4a, #0b1621);
+  padding: 20px 0;
+  color: white;
+}
+
+.about-me {
+  padding: 50px 20px;
+  max-width: 1000px;
+  margin: auto;
+}
+
+.about-me h1 {
+  text-align: center;
+  font-size: 36px;
+  color: #102942;
+  margin-bottom: 40px;
+}
+
+.about-me h1 span {
+  color: #edce94;
+}
+
+.profile-section {
+  display: flex;
+  gap: 30px;
+  align-items: center;
+  margin-bottom: 40px;
+}
+
+.profile-section img {
+  width: 160px;
+  height: 160px;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+.profile-section p {
+  flex: 1;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+.my-journey, .education, .what-i-do {
+  margin-bottom: 40px;
+}
+
+.my-journey h2,
+.education h2,
+.what-i-do h2 {
+  color: #102942;
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.education p {
+  margin-bottom: 15px;
+  line-height: 1.6;
+}
+
+.what-i-do ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.what-i-do ul li {
+  margin-bottom: 10px;
+  font-size: 15px;
+}
+
+.contact-form {
+  background: linear-gradient(to right, #f3d89b, #ba9351);
+  padding: 30px;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.contact-form h3 {
+  margin-bottom: 20px;
+}
+
+.contact-form input {
+  padding: 10px;
+  margin: 5px;
+  border: none;
+  width: 40%;
+}
+
+.contact-form button {
+  padding: 10px 20px;
+  background-color: #102942;
+  color: white;
+  border: none;
+  margin-top: 10px;
+}
+
+.contact-form a {
+  display: block;
+  margin-top: 15px;
+  color: #102942;
+  text-decoration: underline;
 }
