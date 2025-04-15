@@ -90,7 +90,7 @@ nav a {
 /* ======================== */
 /*          HEADER          */
 /* ======================== */
-header {
+.header {
   background: linear-gradient(to right, #90c8ec, #182f4a);
   padding: 20px;
   color: white;
@@ -252,7 +252,7 @@ header {
 /* ======================== */
 
 .about-header {
-  background: linear-gradient(to right, #182f4a, #0b1621);
+  background: linear-gradient(to right, #90c8ec, #182f4a);
   padding: 20px 0;
   color: white;
 }
@@ -353,3 +353,6 @@ header {
   color: #102942;
   text-decoration: underline;
 }
+
+z-index: 1;
+pointer-events: none;
