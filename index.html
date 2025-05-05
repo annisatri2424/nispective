@@ -10,6 +10,26 @@
     href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
   />
 </head>
+ 
+<script>
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        const el = entry.target;
+        const animation = el.getAttribute('data-animate');
+        el.classList.add(animation);
+        el.classList.add('animate__animated');
+        observer.unobserve(el); // Hanya animasi sekali
+      }
+    });
+  }, {
+    threshold: 0.2
+  });
+
+  document.querySelectorAll('.article-item').forEach(item => {
+    observer.observe(item);
+  });
+</script>
 
 <body>
 <header class="header">
@@ -28,37 +48,37 @@
   <div class="search-bar">
     <input type="text" placeholder="Search" />
   </div> 
-  <div class="hero animate__animated animate__fadeInUp">
+  <div class="hero">
     <div class="hero-text">
-      <h1 style="margin-left: 80px; font-size: 47px; opacity: 0.8; margin-bottom: 0px;">
+      <h1 style="margin-left: 80px; font-size: 47px; opacity: 0.8; margin-bottom: 0px;" class="animate__animated animate__fadeInDown">
         Welcome to <br>
       </h1>
-      <img src="image/nispec.png" alt="Nispective Logo" style="height: 180px; width:auto; margin-left: 80px; margin-top: 0;" class="animate__animated animate__fadeInDown"">      
-      <p style="margin-left: 80px; text-align: justify;">Hi, I’m Nur Annisa!<br>
+      <img src="image/nispec.png" alt="Nispective Logo" style="height: 180px; width:auto; margin-left: 80px; margin-top: 0;" class="animate__animated animate__fadeInDown animate__delay-0.2s" >      
+      <p style="margin-left: 80px; text-align: justify;" class="animate__animated animate__fadeInLeft animate__delay-0.2s">Hi, I’m Nur Annisa!<br>
       I’m 19 years old and a Digital Business student at Universitas Negeri Makassar. I'm passionate about films and love sharing my thoughts on what makes a movie great (or not so great). Through this platform, I document my viewing experiences, rate films, and explore different perspectives on storytelling.</p>
-      <button class="more-about-btn" onclick="window.location.href='about.html'" style="margin-left: 80px;">More About Me</button>
+      <button class="more-about-btn animate__animated animate__bounceIn animate__delay-2s" onclick="window.location.href='about.html'" style="margin-left: 80px;">More About Me</button>
     </div>
-    <img src="image/nis.png" alt="Profile Image"  style="height: 350px; width:auto; margin-right: 60px;" />
+    <img src="image/nis.png" alt="Profile Image"  style="height: 350px; width:auto; margin-right: 60px;" class="animate__animated animate__zoomIn" />
   </div>  
 </header>
 
 <section class="articles">
   <h2>Latest Articles</h2>
-  <div class="hero animate__animated animate__fadeInLeft"></div>
+  <div class="hero"></div>
     <div class="article-list">
-      <div class="article-item">
+      <div class="article-item animate__animated" data-animate="animate__fadeInUp">
         <img src="image/art1.png" alt="Article 1">
         <h3>ESSAI SINGKAT TENTANG KEWIRAUSAHAAN</h3>
       </div>
-      <div class="article-item">
+      <div class="article-item animate__animated" data-animate="animate__fadeInUp">
         <img src="image/art2.png" alt="Article 2">
         <h3>BMC – PLATFORM LAYANAN PERAWATAN MOTOR</h3>
       </div>
-      <div class="article-item">
+      <div class="article-item animate__animated" data-animate="animate__fadeInUp">
         <img src="image/art3.png" alt="Article 3">
         <h3>MENGGUNAKAN METODE SCAMPER PADA INOVASI</h3>
       </div>
-      <div class="article-item">
+      <div class="article-item animate__animated" data-animate="animate__fadeInUp">
         <img src="image/art4.png" alt="Article 4">
         <h3>MARKET FAILURE AND EXTERNALITIES</h3>
       </div>
